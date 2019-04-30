@@ -6,26 +6,33 @@
 # Underwater block multiplier
 # If blocks are below sea-level, they can have a higher value. e.g. 2x
 # Promotes under-water development if there is a sea. Value can be fractional.
+# 水下倍数，海岛用
 underwater: 1.0
 
 # Value of one island level. Default 100. Minimum value is 1.
+# 1级100分
 levelcost: 100
 
 # Death penalty
 # How many block values a player will lose per death.
 # Default value of 100 means that for every death, the player will lose 1 level (if levelcost is 100)
 # Set to zero to not use this feature
+# 死掉一次扣100分
 deathpenalty: 100
 # Sum team deaths - if true, all the teams deaths are summed
 # If false, only the leader's deaths counts
+# 只计算岛主的死亡次数
 sumteamdeaths: false
 # Max deaths
 # If player dies more than this, it doesn't count anymore
 # Stops players from getting into an impossible situation
+# 最大扣10次
 maxdeaths: 10
 # Reset deaths on island reset
+# 岛屿重置后，死亡次数清零
 islandresetdeathreset: true
 # Reset deaths on team join
+# 有成员加入后，死亡次数清零
 teamjoindeathreset: true
 
 
@@ -36,26 +43,32 @@ teamjoindeathreset: true
 # If DATA is used, there MUST be a corresponding block:data value in the blocks list.
 # For example, if you limit Jungle Logs LOG:3, then there must be a value for LOG:3
 # in the blocks section. If there is not, then LOG:3 would have no value.
+# 最大计算数量
 limits:
+  # 圆石
   COBBLESTONE: 10000
+  # 地狱岩
   NETHERRACK: 1000
   #LOG:3: 10
   
 # This section lists the value of a block. Value must be an integer.
 # Any blocks not listed will have a value of zero.
 # Format is MATERIAL: value or MATERIAL:DATA: value.
-
+# 分值
 blocks:
   ACACIA_DOOR: 1
   ACACIA_STAIRS: 1
   ACACIA_FENCE: 1
   ACACIA_FENCE_GATE: 1
   ACACIA_STAIRS: 2
-  ACTIVATOR_RAIL: 10
+  # 激活铁轨
+  ACTIVATOR_RAIL: 10  
   AIR: 0
+  # 铁砧
   ANVIL: 10
   ARMOR_STAND: 2
   BANNER: 2
+  # 信标
   BEACON: 100
   BED_BLOCK: 1
   BEDROCK: 0
@@ -75,21 +88,28 @@ blocks:
   BOAT_JUNGLE: 2
   BOAT_SPRUCE: 2
   BONE_BLOCK: 1
+  # 书架
   BOOKSHELF: 5
+  # 酿造台
   BREWING_STAND: 20
+  # 红砖
   BRICK: 5
+  # 砖楼梯
   BRICK_STAIRS: 5
   BROWN_GLAZED_TERRACOTTA: 1
   BROWN_SHULKER_BOX: 1
+  # 燃烧中的熔炉
   BURNING_FURNACE: 10
   CACTUS: 1
   CAKE_BLOCK: 1
   CARPET: 1
+  # 炼药锅
   CAULDRON: 10
   CHEST: 2
   CHORUS_FLOWER: 1
   CHORUS_PLANT: 1
   CLAY: 2
+  # 煤炭块
   COAL_BLOCK: 9
   COAL_ORE: 0
   COBBLE_WALL: 1
@@ -104,41 +124,60 @@ blocks:
   DARK_OAK_FENCE: 1
   DARK_OAK_FENCE_GATE: 1
   DARK_OAK_STAIRS: 1
+  # 阳光传感器
   DAYLIGHT_DETECTOR: 10
+  # 反向阳光传感器
   DAYLIGHT_DETECTOR_INVERTED: 10
   DEAD_BUSH: 1
+  # 探测铁轨
   DETECTOR_RAIL: 10
+  # 钻石块
   DIAMOND_BLOCK: 300
+  # 红石中继器
   DIODE: 5
+  # 红石中继器关
   DIODE_BLOCK_OFF: 5
+  # 红石中继器开
   DIODE_BLOCK_ON: 5
   DIRT: 2
+  # 发射器
   DISPENSER: 5
   DOUBLE_PLANT: 2
   DOUBLE_STEP: 1
   DOUBLE_STONE_SLAB2: 1
+  # 龙蛋
   DRAGON_EGG: 150
+  # 投掷器
   DROPPER: 5
+  # 绿宝石块
   EMERALD_BLOCK: 150
   EMERALD_ORE: 0
+  # 附魔台
   ENCHANTMENT_TABLE: 150
   END_BRICKS: 2
+  # 末影箱
   ENDER_CHEST: 150
   ENDER_PORTAL_FRAME: 0
   ENDER_PORTAL: 0
   ENDER_STONE: 2
+  # 爆炸矿车
   EXPLOSIVE_MINECART: 10
   FENCE: 1
   FENCE_GATE: 1
   FIRE: 0
+  # 花盆
   FLOWER_POT: 5
   FROSTED_ICE: 1
+  # 熔炉
   FURNACE: 10
   GLASS: 2
   GLOWSTONE: 1
+  # 金块
   GOLD_BLOCK: 150
   GOLD_ORE: 0
+  # 草方块
   GRASS: 5
+  # 草径
   GRASS_PATH: 5
   GRAY_GLAZED_TERRACOTTA: 1
   GRAY_SHULKER_BOX: 1
@@ -147,25 +186,34 @@ blocks:
   GREEN_SHULKER_BOX: 1
   HARD_CLAY: 2
   HAY_BLOCK: 2
+  # 漏斗
   HOPPER: 10
+  # 漏斗矿车
   HOPPER_MINECART: 20
   HUGE_MUSHROOM_1: 1
   HUGE_MUSHROOM_2: 1
+  # 冰
   ICE: 5
+  # 铁块
   IRON_BLOCK: 10
+  # 铁门
   IRON_DOOR_BLOCK: 5
+  # 铁栅栏
   IRON_FENCE: 5
   IRON_ORE: 0
+  # 铁压力板
   IRON_PLATE: 5
   IRON_TRAPDOOR: 1
   ITEM_FRAME: 2
   JACK_O_LANTERN: 1
+  # 音乐盒
   JUKEBOX: 10
   JUNGLE_DOOR: 1
   JUNGLE_FENCE: 1
   JUNGLE_FENCE_GATE: 1
   JUNGLE_WOOD_STAIRS: 1
   LADDER: 1
+  # 青金石块
   LAPIS_BLOCK: 10
   LAPIS_ORE: 0
   LAVA: 0
@@ -186,9 +234,11 @@ blocks:
   MAGMA: 1
   MELON_BLOCK: 1
   MELON_STEM: 1
+  # 矿车
   MINECART: 10
   MOB_SPAWNER: 0
   MOSSY_COBBLESTONE: 2
+  # 菌丝
   MYCEL: 5
   NETHER_BRICK: 2
   NETHER_BRICK_STAIRS: 2
@@ -196,11 +246,14 @@ blocks:
   NETHER_STALK: 1
   NETHER_WART_BLOCK: 2
   NETHERRACK: 1
+  # 音符盒
   NOTE_BLOCK: 10
   OBSERVER: 1
+  # 黑曜石
   OBSIDIAN: 10
   ORANGE_GLAZED_TERRACOTTA: 1
   ORANGE_SHULKER_BOX: 1
+  # 冰块
   PACKED_ICE: 5
   PAINTING: 2
   PINK_GLAZED_TERRACOTTA: 1
@@ -208,8 +261,11 @@ blocks:
   PISTON_BASE: 2
   PISTON_STICKY_BASE: 2
   PORTAL: 0
+  # 动力矿车
   POWERED_MINECART: 10
+  # 动力铁轨
   POWERED_RAIL: 10
+  # 海晶石
   PRISMARINE: 10
   PUMPKIN_STEM: 1
   PUMPKIN: 1
@@ -232,14 +288,22 @@ blocks:
   RED_SANDSTONE: 1
   RED_SANDSTONE_STAIRS: 1
   RED_SHULKER_BOX: 1
+  # 红石块
   REDSTONE_BLOCK: 10
+  # 红石比较器关
   REDSTONE_COMPARATOR_OFF: 10
+  # 红石比较器开
   REDSTONE_COMPARATOR_ON: 10
+  # 红石比较器
   REDSTONE_COMPARATOR: 10
+  # 红石灯关
   REDSTONE_LAMP_OFF: 10
+  # 红石灯开
   REDSTONE_LAMP_ON: 10
   REDSTONE_ORE: 0
+  # 红石火把关
   REDSTONE_TORCH_OFF: 5
+  # 红石火把开
   REDSTONE_TORCH_ON: 5
   REDSTONE_WIRE: 1
   SAND: 1
@@ -249,13 +313,16 @@ blocks:
   SIGN_POST: 1
   SILVER_GLAZED_TERRACOTTA: 1
   SILVER_SHULKER_BOX: 1
+  # 生物头颅
   SKULL: 10
+  # 史莱姆块
   SLIME_BLOCK: 10
   SMOOTH_BRICK: 2
   SMOOTH_STAIRS: 2
   SNOW_BLOCK: 1
   SOIL: 2
   SOUL_SAND: 2
+  # 海绵
   SPONGE: 10
   SPRUCE_DOOR: 1
   SPRUCE_FENCE: 1
@@ -270,18 +337,23 @@ blocks:
   STONE: 1
   STONE_BUTTON: 1
   STONE_PLATE: 2
+  # 运输矿车
   STORAGE_MINECART: 10
   SUGAR_CANE_BLOCK: 1
   THIN_GLASS: 1
   TNT: 5
   TORCH: 2
+  # 活板门
   TRAP_DOOR: 5
+  # 陷阱箱
   TRAPPED_CHEST: 10
   TRIPWIRE_HOOK: 2
   TRIPWIRE: 2
   VINE: 1
   WALL_SIGN: 1
+  # 睡莲
   WATER_LILY: 5
+  # 蜘蛛网
   WEB: 10
   WHEAT: 1
   WHITE_GLAZED_TERRACOTTA: 1
@@ -299,4 +371,3 @@ blocks:
   YELLOW_FLOWER: 1
   YELLOW_GLAZED_TERRACOTTA: 1
   YELLOW_SHULKER_BOX: 1
-  
